@@ -34,6 +34,10 @@ Open the `.xcworkspace`.
 
 ## Quick start
 
+Works with **SwiftUI** and **UIKit (Swift)**. Always call `configure(apiKey:)` at launch.
+
+### SwiftUI
+
 ```swift
 import MRTDeepLinkSDK
 import SwiftUI
@@ -42,6 +46,15 @@ import SwiftUI
 struct MyApp: App {
     init() {
         MRTDeepLink.shared.configure(apiKey: "pk_live_…")
+
+        MRTDeepLink.shared.onDeferredMatch { outcome in
+            switch outcome {
+            case .matched(let info):
+                print(info.destinationPath ?? "")
+            case .notMatched, .failed:
+                break
+            }
+        }
     }
 
     var body: some Scene {
@@ -55,20 +68,53 @@ struct MyApp: App {
 }
 ```
 
-### Typed deferred match
+### UIKit (Swift) — AppDelegate + SceneDelegate
 
 ```swift
-MRTDeepLink.shared.onDeferredMatch { outcome in
-    switch outcome {
-    case .matched(let info):
-        print(info.destinationPath ?? "")
-        print(info[.slug] ?? "")
-    case .notMatched:
-        break
-    case .failed(let error):
-        print(error.localizedDescription)
+import UIKit
+import MRTDeepLinkSDK
+
+// AppDelegate
+func application(
+    _ application: UIApplication,
+    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+) -> Bool {
+    MRTDeepLink.shared.configure(apiKey: "pk_live_…")
+
+    MRTDeepLink.shared.onDeepLink { payload in
+        print(payload.path, payload.isDeferred)
     }
+
+    MRTDeepLink.shared.onDeferredMatch { outcome in
+        switch outcome {
+        case .matched(let info):
+            print(info.destinationPath ?? "")
+        case .notMatched, .failed:
+            break
+        }
+    }
+    return true
 }
+
+// SceneDelegate
+func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+    MRTDeepLinkSceneSupport.handle(connectionOptions: connectionOptions)
+}
+
+func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
+    _ = MRTDeepLinkSceneSupport.handle(userActivity: userActivity)
+}
+
+func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+    MRTDeepLinkSceneSupport.handle(urlContexts: URLContexts)
+}
+```
+
+### UIKit — manual handlers
+
+```swift
+_ = MRTDeepLink.shared.handle(url: url)
+_ = MRTDeepLink.shared.handle(userActivity: userActivity)
 ```
 
 ### Associated Domains

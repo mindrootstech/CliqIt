@@ -133,6 +133,49 @@ applinks:customer.theblockyapp.com
 
 AASA is served on that same domain by the admin/platform — not configured inside this SDK.
 
+
+---
+
+## Troubleshooting
+
+### `Sandbox: rsync deny` / `Operation not permitted` after `pod install`
+
+This is **not** an SDK bug. Newer Xcode enables **User Script Sandboxing**, which can block CocoaPods from embedding the XCFramework — especially when the project or DerivedData lives on an **external disk**.
+
+**Fix in Xcode**
+
+1. Target → Build Settings → search `User Script Sandboxing`
+2. Set **Enable User Script Sandboxing** = **No**
+3. Product → Clean Build Folder → Build
+
+**Or add this to your Podfile** (recommended):
+
+```ruby
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['ENABLE_USER_SCRIPT_SANDBOXING'] = 'NO'
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.0'
+    end
+  end
+
+  installer.aggregate_targets.each do |aggregate_target|
+    aggregate_target.user_project.native_targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings['ENABLE_USER_SCRIPT_SANDBOXING'] = 'NO'
+      end
+    end
+    aggregate_target.user_project.save
+  end
+end
+```
+
+Then:
+
+```bash
+pod install
+```
+
 ---
 
 ## License

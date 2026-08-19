@@ -1,13 +1,15 @@
-# MRTSmartLink (MRTDeepLinkSDK)
+# CliqIt (MRTSmartLink)
 
 iOS SDK for **deferred deep linking** — closed-source binary only.
 
-**Version:** `1.0.1` · **iOS 15+** · **Swift 5**
+**Version:** `2.0.0` · **iOS 15+** · **Swift 5**
 
-This repository does **not** include Swift source. It ships a compiled `MRTDeepLinkSDK.xcframework`.
+This repository does **not** include Swift source. It ships a compiled `CliqIt.xcframework`.
 
 - Match API: `POST https://api.theblockyapp.com/api/v1/sdk/app/match`
 - Auth header: `x-api-key: <your App SDK API Key>`
+
+> **Breaking rename:** `MRTDeepLinkSDK` → **`CliqIt`** (module, types, CocoaPods pod). Use tag `2.0.0+`.
 
 ---
 
@@ -18,9 +20,9 @@ platform :ios, '15.0'
 use_frameworks!
 
 target 'YourApp' do
-  pod 'MRTDeepLinkSDK',
+  pod 'CliqIt',
       :git => 'https://github.com/mindrootstech/MRTSmartLink.git',
-      :tag => '1.0.1'
+      :tag => '2.0.0'
 end
 ```
 
@@ -30,27 +32,31 @@ pod install
 
 Open the `.xcworkspace`.
 
+If CocoaPods fails with `rsync: … Operation not permitted` (often on external disks / sandboxed user scripts), set in your app target:
+
+```
+ENABLE_USER_SCRIPT_SANDBOXING = NO
+```
+
 ---
 
 ## Quick start
 
-Works with **SwiftUI** and **UIKit (Swift)**.
-
 **Required:** call `configure(apiKey:)` at launch **before** `onDeepLink` / `onDeferredMatch`.  
-If you skip it, the SDK prints a console warning and `onDeferredMatch` receives `.failed(.notConfigured)` — deferred matching will not run.
+If you skip it, the SDK prints a console warning and `onDeferredMatch` receives `.failed(.notConfigured)`.
 
 ### SwiftUI
 
 ```swift
-import MRTDeepLinkSDK
+import CliqIt
 import SwiftUI
 
 @main
 struct MyApp: App {
     init() {
-        MRTDeepLink.shared.configure(apiKey: "pk_live_…")
+        CliqIt.shared.configure(apiKey: "pk_live_…")
 
-        MRTDeepLink.shared.onDeferredMatch { outcome in
+        CliqIt.shared.onDeferredMatch { outcome in
             switch outcome {
             case .matched(let info):
                 print(info.destinationPath ?? "")
@@ -63,7 +69,7 @@ struct MyApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .handleMRTDeepLinks { payload in
+                .handleCliqItDeepLinks { payload in
                     print(payload.path, payload.isDeferred)
                 }
         }
@@ -71,29 +77,24 @@ struct MyApp: App {
 }
 ```
 
-### UIKit (Swift) — AppDelegate + SceneDelegate
+### UIKit (Swift)
 
 ```swift
 import UIKit
-import MRTDeepLinkSDK
+import CliqIt
 
-// AppDelegate
 func application(
     _ application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
 ) -> Bool {
-    MRTDeepLink.shared.configure(apiKey: "pk_live_…")
-
-    MRTDeepLink.shared.onDeepLink { payload in
+    CliqIt.shared.configure(apiKey: "pk_live_…")
+    CliqIt.shared.onDeepLink { payload in
         print(payload.path, payload.isDeferred)
     }
-
-    MRTDeepLink.shared.onDeferredMatch { outcome in
+    CliqIt.shared.onDeferredMatch { outcome in
         switch outcome {
-        case .matched(let info):
-            print(info.destinationPath ?? "")
-        case .notMatched, .failed:
-            break
+        case .matched(let info): print(info.destinationPath ?? "")
+        case .notMatched, .failed: break
         }
     }
     return true
@@ -101,86 +102,33 @@ func application(
 
 // SceneDelegate
 func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-    MRTDeepLinkSceneSupport.handle(connectionOptions: connectionOptions)
+    CliqItSceneSupport.handle(connectionOptions: connectionOptions)
 }
-
 func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
-    _ = MRTDeepLinkSceneSupport.handle(userActivity: userActivity)
+    _ = CliqItSceneSupport.handle(userActivity: userActivity)
 }
-
 func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-    MRTDeepLinkSceneSupport.handle(urlContexts: URLContexts)
+    CliqItSceneSupport.handle(urlContexts: URLContexts)
 }
 ```
 
-### UIKit — manual handlers
+---
 
-```swift
-_ = MRTDeepLink.shared.handle(url: url)
-_ = MRTDeepLink.shared.handle(userActivity: userActivity)
-```
+## Associated Domains
 
-### Associated Domains
-
-Universal Link domain comes from **your SmartLink admin panel** (each app/tenant can have its own host). Add that exact host in Xcode:
+Use the **SmartLink / Universal Link domain from your admin panel**:
 
 ```
 applinks:<your-admin-panel-domain>
 ```
 
-Example:
-
-```
-applinks:customer.theblockyapp.com
-```
-
-AASA is served on that same domain by the admin/platform — not configured inside this SDK.
-
-
 ---
 
-## Troubleshooting
+## Migration from MRTDeepLinkSDK 1.x
 
-### `Sandbox: rsync deny` / `Operation not permitted` after `pod install`
-
-This is **not** an SDK bug. Newer Xcode enables **User Script Sandboxing**, which can block CocoaPods from embedding the XCFramework — especially when the project or DerivedData lives on an **external disk**.
-
-**Fix in Xcode**
-
-1. Target → Build Settings → search `User Script Sandboxing`
-2. Set **Enable User Script Sandboxing** = **No**
-3. Product → Clean Build Folder → Build
-
-**Or add this to your Podfile** (recommended):
-
-```ruby
-post_install do |installer|
-  installer.pods_project.targets.each do |target|
-    target.build_configurations.each do |config|
-      config.build_settings['ENABLE_USER_SCRIPT_SANDBOXING'] = 'NO'
-      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.0'
-    end
-  end
-
-  installer.aggregate_targets.each do |aggregate_target|
-    aggregate_target.user_project.native_targets.each do |target|
-      target.build_configurations.each do |config|
-        config.build_settings['ENABLE_USER_SCRIPT_SANDBOXING'] = 'NO'
-      end
-    end
-    aggregate_target.user_project.save
-  end
-end
-```
-
-Then:
-
-```bash
-pod install
-```
-
----
-
-## License
-
-Proprietary — see `LICENSE`.
+| Before | After |
+|--------|-------|
+| `import MRTDeepLinkSDK` | `import CliqIt` |
+| `MRTDeepLink.shared` | `CliqIt.shared` |
+| `.handleMRTDeepLinks` | `.handleCliqItDeepLinks` |
+| `pod 'MRTDeepLinkSDK'` | `pod 'CliqIt'` |

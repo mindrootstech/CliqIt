@@ -34,7 +34,10 @@ Open the `.xcworkspace`.
 
 ## Quick start
 
-Works with **SwiftUI** and **UIKit (Swift)**. Always call `configure(apiKey:)` at launch.
+Works with **SwiftUI** and **UIKit (Swift)**.
+
+**Required:** call `configure(apiKey:)` at launch **before** `onDeepLink` / `onDeferredMatch`.  
+If you skip it, the SDK prints a console warning and `onDeferredMatch` receives `.failed(.notConfigured)` — deferred matching will not run.
 
 ### SwiftUI
 

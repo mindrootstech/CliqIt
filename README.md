@@ -114,14 +114,3 @@ Use the Universal Link domain from your admin panel:
 ```
 applinks:<your-admin-panel-domain>
 ```
-
----
-
-## Migration from MRTDeepLinkSDK 1.x
-
-| Before | After |
-|--------|-------|
-| `import MRTDeepLinkSDK` | `import CliqIt` |
-| `MRTDeepLink.shared` | `CliqIt.shared` |
-| `.handleMRTDeepLinks` | `.handleCliqItDeepLinks` |
-| `pod 'MRTDeepLinkSDK'` | `pod 'CliqIt'` |

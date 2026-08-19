@@ -2,7 +2,7 @@
 
 iOS SDK for **deferred deep linking** — closed-source binary only.
 
-**Version:** `1.0.0` · **iOS 15+** · **Swift 5**
+**Version:** `1.0.1` · **iOS 15+** · **Swift 5**
 
 This repository does **not** include Swift source. It ships a compiled `MRTDeepLinkSDK.xcframework`.
 
@@ -20,7 +20,7 @@ use_frameworks!
 target 'YourApp' do
   pod 'MRTDeepLinkSDK',
       :git => 'https://github.com/mindrootstech/MRTSmartLink.git',
-      :tag => '1.0.0'
+      :tag => '1.0.1'
 end
 ```
 

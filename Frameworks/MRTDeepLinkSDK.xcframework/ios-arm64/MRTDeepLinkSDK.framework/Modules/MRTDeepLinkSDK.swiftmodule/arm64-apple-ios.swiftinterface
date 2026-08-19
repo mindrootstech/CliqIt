@@ -192,6 +192,7 @@ public struct MRTDeferredMatchResponse : Swift.Decodable, Swift.Sendable, Swift.
   public static func == (a: MRTDeepLinkSDK.MRTDeferredMatchResponse, b: MRTDeepLinkSDK.MRTDeferredMatchResponse) -> Swift.Bool
 }
 public enum MRTDeferredMatchError : Swift.Error, Swift.Sendable, Swift.Equatable, Foundation.LocalizedError {
+  case notConfigured
   case message(Swift.String)
   public var errorDescription: Swift.String? {
     get

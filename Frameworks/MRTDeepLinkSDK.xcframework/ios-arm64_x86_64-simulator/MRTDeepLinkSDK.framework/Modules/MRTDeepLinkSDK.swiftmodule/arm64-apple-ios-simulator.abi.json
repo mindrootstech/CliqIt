@@ -5143,6 +5143,43 @@
         "children": [
           {
             "kind": "Var",
+            "name": "notConfigured",
+            "printedName": "notConfigured",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MRTDeepLinkSDK.MRTDeferredMatchError.Type) -> MRTDeepLinkSDK.MRTDeferredMatchError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MRTDeferredMatchError",
+                    "printedName": "MRTDeepLinkSDK.MRTDeferredMatchError",
+                    "usr": "s:14MRTDeepLinkSDK21MRTDeferredMatchErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MRTDeepLinkSDK.MRTDeferredMatchError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MRTDeferredMatchError",
+                        "printedName": "MRTDeepLinkSDK.MRTDeferredMatchError",
+                        "usr": "s:14MRTDeepLinkSDK21MRTDeferredMatchErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14MRTDeepLinkSDK21MRTDeferredMatchErrorO13notConfiguredyA2CmF",
+            "mangledName": "$s14MRTDeepLinkSDK21MRTDeferredMatchErrorO13notConfiguredyA2CmF",
+            "moduleName": "MRTDeepLinkSDK"
+          },
+          {
+            "kind": "Var",
             "name": "message",
             "printedName": "message",
             "children": [
@@ -7434,7 +7471,7 @@
     {
       "filePath": "\/Volumes\/ExternalDisk\/MRTDeepLink\/MRTDeepLinkSDK\/MRTDeepLinkSDK\/Classes\/MRTDeferredMatch.swift",
       "kind": "BooleanLiteral",
-      "offset": 4790,
+      "offset": 4974,
       "length": 5,
       "value": "false"
     },

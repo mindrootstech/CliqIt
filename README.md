@@ -6,11 +6,6 @@ iOS SDK for **deferred deep linking** — closed-source binary only.
 
 This repository does **not** include Swift source. It ships a compiled `CliqIt.xcframework`.
 
-- Match API: `POST https://api.theblockyapp.com/api/v1/sdk/app/match`
-- Auth header: `x-api-key: <your App SDK API Key>`
-
-> **Breaking rename:** `MRTDeepLinkSDK` → **`CliqIt`** (module, types, CocoaPods pod). Use tag `2.0.0+`.
-
 ---
 
 ## Install (CocoaPods)

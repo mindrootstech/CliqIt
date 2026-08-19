@@ -1,4 +1,4 @@
-# CliqIt (MRTSmartLink)
+# CliqIt
 
 iOS SDK for **deferred deep linking** — closed-source binary only.
 
@@ -21,7 +21,7 @@ use_frameworks!
 
 target 'YourApp' do
   pod 'CliqIt',
-      :git => 'https://github.com/mindrootstech/MRTSmartLink.git',
+      :git => 'https://github.com/mindrootstech/CliqIt.git',
       :tag => '2.0.0'
 end
 ```
@@ -116,7 +116,7 @@ func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>)
 
 ## Associated Domains
 
-Use the **SmartLink / Universal Link domain from your admin panel**:
+Use the Universal Link domain from your admin panel:
 
 ```
 applinks:<your-admin-panel-domain>

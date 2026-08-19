@@ -73,9 +73,19 @@ MRTDeepLink.shared.onDeferredMatch { outcome in
 
 ### Associated Domains
 
+Universal Link domain comes from **your SmartLink admin panel** (each app/tenant can have its own host). Add that exact host in Xcode:
+
 ```
-applinks:theblockyapp.com
+applinks:<your-admin-panel-domain>
 ```
+
+Example:
+
+```
+applinks:customer.theblockyapp.com
+```
+
+AASA is served on that same domain by the admin/platform — not configured inside this SDK.
 
 ---
 

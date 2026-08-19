@@ -16,8 +16,8 @@ public typealias CliqItHandler = (CliqIt.CliqItPayload) -> Swift.Void
 extension Foundation.NSNotification.Name {
   public static let cliqItDeepLinkIgnored: Foundation.Notification.Name
 }
-@_hasMissingDesignatedInitializers final public class CliqIt : @unchecked Swift.Sendable {
-  public static let shared: CliqIt.CliqIt
+@_hasMissingDesignatedInitializers final public class CliqItSDK : @unchecked Swift.Sendable {
+  public static let shared: CliqIt.CliqItSDK
   final public var isConfigured: Swift.Bool {
     get
   }
@@ -42,9 +42,9 @@ extension Foundation.NSNotification.Name {
     get
   }
   @discardableResult
-  final public func configure(apiKey: Swift.String) -> CliqIt.CliqIt
+  final public func configure(apiKey: Swift.String) -> CliqIt.CliqItSDK
   @discardableResult
-  final public func configure(_ configuration: CliqIt.CliqItConfiguration) -> CliqIt.CliqIt
+  final public func configure(_ configuration: CliqIt.CliqItConfiguration) -> CliqIt.CliqItSDK
   final public func onDeferredMatchDebug(_ handler: @escaping CliqIt.CliqItDeferredMatchDebugHandler)
   final public func onDeferredMatch(_ handler: @escaping CliqIt.CliqItDeferredMatchHandler)
   final public func onDeferredMatchDebugRequest(_ handler: @escaping CliqIt.CliqItDeferredMatchDebugRequestHandler)

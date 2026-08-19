@@ -13,8 +13,8 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "CliqIt",
-        "printedName": "CliqIt",
+        "name": "CliqItSDK",
+        "printedName": "CliqItSDK",
         "children": [
           {
             "kind": "Var",
@@ -23,14 +23,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "CliqIt",
-                "printedName": "CliqIt.CliqIt",
-                "usr": "s:6CliqItAAC"
+                "name": "CliqItSDK",
+                "printedName": "CliqIt.CliqItSDK",
+                "usr": "s:6CliqIt0aB3SDKC"
               }
             ],
             "declKind": "Var",
-            "usr": "s:6CliqItAAC6sharedABvpZ",
-            "mangledName": "$s6CliqItAAC6sharedABvpZ",
+            "usr": "s:6CliqIt0aB3SDKC6sharedACvpZ",
+            "mangledName": "$s6CliqIt0aB3SDKC6sharedACvpZ",
             "moduleName": "CliqIt",
             "static": true,
             "declAttributes": [
@@ -49,14 +49,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "CliqIt",
-                    "printedName": "CliqIt.CliqIt",
-                    "usr": "s:6CliqItAAC"
+                    "name": "CliqItSDK",
+                    "printedName": "CliqIt.CliqItSDK",
+                    "usr": "s:6CliqIt0aB3SDKC"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6CliqItAAC6sharedABvgZ",
-                "mangledName": "$s6CliqItAAC6sharedABvgZ",
+                "usr": "s:6CliqIt0aB3SDKC6sharedACvgZ",
+                "mangledName": "$s6CliqIt0aB3SDKC6sharedACvgZ",
                 "moduleName": "CliqIt",
                 "static": true,
                 "implicit": true,
@@ -80,8 +80,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6CliqItAAC12isConfiguredSbvp",
-            "mangledName": "$s6CliqItAAC12isConfiguredSbvp",
+            "usr": "s:6CliqIt0aB3SDKC12isConfiguredSbvp",
+            "mangledName": "$s6CliqIt0aB3SDKC12isConfiguredSbvp",
             "moduleName": "CliqIt",
             "declAttributes": [
               "Final",
@@ -101,8 +101,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6CliqItAAC12isConfiguredSbvg",
-                "mangledName": "$s6CliqItAAC12isConfiguredSbvg",
+                "usr": "s:6CliqIt0aB3SDKC12isConfiguredSbvg",
+                "mangledName": "$s6CliqIt0aB3SDKC12isConfiguredSbvg",
                 "moduleName": "CliqIt",
                 "declAttributes": [
                   "Final"
@@ -132,8 +132,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6CliqItAAC33currentDeferredMatchDebugResponseAA0abdeG0VSgvp",
-            "mangledName": "$s6CliqItAAC33currentDeferredMatchDebugResponseAA0abdeG0VSgvp",
+            "usr": "s:6CliqIt0aB3SDKC33currentDeferredMatchDebugResponseAA0abefH0VSgvp",
+            "mangledName": "$s6CliqIt0aB3SDKC33currentDeferredMatchDebugResponseAA0abefH0VSgvp",
             "moduleName": "CliqIt",
             "declAttributes": [
               "Final",
@@ -161,8 +161,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6CliqItAAC33currentDeferredMatchDebugResponseAA0abdeG0VSgvg",
-                "mangledName": "$s6CliqItAAC33currentDeferredMatchDebugResponseAA0abdeG0VSgvg",
+                "usr": "s:6CliqIt0aB3SDKC33currentDeferredMatchDebugResponseAA0abefH0VSgvg",
+                "mangledName": "$s6CliqIt0aB3SDKC33currentDeferredMatchDebugResponseAA0abefH0VSgvg",
                 "moduleName": "CliqIt",
                 "declAttributes": [
                   "Final"
@@ -192,8 +192,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6CliqItAAC28currentMatchDebugRequestJSONSSSgvp",
-            "mangledName": "$s6CliqItAAC28currentMatchDebugRequestJSONSSSgvp",
+            "usr": "s:6CliqIt0aB3SDKC28currentMatchDebugRequestJSONSSSgvp",
+            "mangledName": "$s6CliqIt0aB3SDKC28currentMatchDebugRequestJSONSSSgvp",
             "moduleName": "CliqIt",
             "declAttributes": [
               "Final",
@@ -221,8 +221,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6CliqItAAC28currentMatchDebugRequestJSONSSSgvg",
-                "mangledName": "$s6CliqItAAC28currentMatchDebugRequestJSONSSSgvg",
+                "usr": "s:6CliqIt0aB3SDKC28currentMatchDebugRequestJSONSSSgvg",
+                "mangledName": "$s6CliqIt0aB3SDKC28currentMatchDebugRequestJSONSSSgvg",
                 "moduleName": "CliqIt",
                 "declAttributes": [
                   "Final"
@@ -252,8 +252,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6CliqItAAC21currentWebFingerprintAA0abdE0VSgvp",
-            "mangledName": "$s6CliqItAAC21currentWebFingerprintAA0abdE0VSgvp",
+            "usr": "s:6CliqIt0aB3SDKC21currentWebFingerprintAA0abeF0VSgvp",
+            "mangledName": "$s6CliqIt0aB3SDKC21currentWebFingerprintAA0abeF0VSgvp",
             "moduleName": "CliqIt",
             "declAttributes": [
               "Final",
@@ -282,8 +282,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6CliqItAAC21currentWebFingerprintAA0abdE0VSgvg",
-                "mangledName": "$s6CliqItAAC21currentWebFingerprintAA0abdE0VSgvg",
+                "usr": "s:6CliqIt0aB3SDKC21currentWebFingerprintAA0abeF0VSgvg",
+                "mangledName": "$s6CliqIt0aB3SDKC21currentWebFingerprintAA0abeF0VSgvg",
                 "moduleName": "CliqIt",
                 "declAttributes": [
                   "Final"
@@ -305,8 +305,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6CliqItAAC19combinedFingerprintAA0ab8CombinedD0Vvp",
-            "mangledName": "$s6CliqItAAC19combinedFingerprintAA0ab8CombinedD0Vvp",
+            "usr": "s:6CliqIt0aB3SDKC19combinedFingerprintAA0ab8CombinedE0Vvp",
+            "mangledName": "$s6CliqIt0aB3SDKC19combinedFingerprintAA0ab8CombinedE0Vvp",
             "moduleName": "CliqIt",
             "declAttributes": [
               "Final",
@@ -327,8 +327,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6CliqItAAC19combinedFingerprintAA0ab8CombinedD0Vvg",
-                "mangledName": "$s6CliqItAAC19combinedFingerprintAA0ab8CombinedD0Vvg",
+                "usr": "s:6CliqIt0aB3SDKC19combinedFingerprintAA0ab8CombinedE0Vvg",
+                "mangledName": "$s6CliqIt0aB3SDKC19combinedFingerprintAA0ab8CombinedE0Vvg",
                 "moduleName": "CliqIt",
                 "declAttributes": [
                   "Final"
@@ -358,8 +358,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:6CliqItAAC21collectWebFingerprintAA0abdE0VSgyYaF",
-            "mangledName": "$s6CliqItAAC21collectWebFingerprintAA0abdE0VSgyYaF",
+            "usr": "s:6CliqIt0aB3SDKC21collectWebFingerprintAA0abeF0VSgyYaF",
+            "mangledName": "$s6CliqIt0aB3SDKC21collectWebFingerprintAA0abeF0VSgyYaF",
             "moduleName": "CliqIt",
             "declAttributes": [
               "Final",
@@ -381,8 +381,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:6CliqItAAC26collectCombinedFingerprintAA0abdE0VyYaF",
-            "mangledName": "$s6CliqItAAC26collectCombinedFingerprintAA0abdE0VyYaF",
+            "usr": "s:6CliqIt0aB3SDKC26collectCombinedFingerprintAA0abeF0VyYaF",
+            "mangledName": "$s6CliqIt0aB3SDKC26collectCombinedFingerprintAA0abeF0VyYaF",
             "moduleName": "CliqIt",
             "declAttributes": [
               "Final",
@@ -404,8 +404,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6CliqItAAC23isDeferredMatchInFlightSbvp",
-            "mangledName": "$s6CliqItAAC23isDeferredMatchInFlightSbvp",
+            "usr": "s:6CliqIt0aB3SDKC23isDeferredMatchInFlightSbvp",
+            "mangledName": "$s6CliqIt0aB3SDKC23isDeferredMatchInFlightSbvp",
             "moduleName": "CliqIt",
             "declAttributes": [
               "Final",
@@ -426,8 +426,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6CliqItAAC23isDeferredMatchInFlightSbvg",
-                "mangledName": "$s6CliqItAAC23isDeferredMatchInFlightSbvg",
+                "usr": "s:6CliqIt0aB3SDKC23isDeferredMatchInFlightSbvg",
+                "mangledName": "$s6CliqIt0aB3SDKC23isDeferredMatchInFlightSbvg",
                 "moduleName": "CliqIt",
                 "declAttributes": [
                   "Final"
@@ -449,8 +449,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6CliqItAAC28hasDeferredMatchBeenReportedSbvp",
-            "mangledName": "$s6CliqItAAC28hasDeferredMatchBeenReportedSbvp",
+            "usr": "s:6CliqIt0aB3SDKC28hasDeferredMatchBeenReportedSbvp",
+            "mangledName": "$s6CliqIt0aB3SDKC28hasDeferredMatchBeenReportedSbvp",
             "moduleName": "CliqIt",
             "declAttributes": [
               "Final",
@@ -471,8 +471,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6CliqItAAC28hasDeferredMatchBeenReportedSbvg",
-                "mangledName": "$s6CliqItAAC28hasDeferredMatchBeenReportedSbvg",
+                "usr": "s:6CliqIt0aB3SDKC28hasDeferredMatchBeenReportedSbvg",
+                "mangledName": "$s6CliqIt0aB3SDKC28hasDeferredMatchBeenReportedSbvg",
                 "moduleName": "CliqIt",
                 "declAttributes": [
                   "Final"
@@ -488,9 +488,9 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "CliqIt",
-                "printedName": "CliqIt.CliqIt",
-                "usr": "s:6CliqItAAC"
+                "name": "CliqItSDK",
+                "printedName": "CliqIt.CliqItSDK",
+                "usr": "s:6CliqIt0aB3SDKC"
               },
               {
                 "kind": "TypeNominal",
@@ -500,8 +500,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:6CliqItAAC9configure6apiKeyABSS_tF",
-            "mangledName": "$s6CliqItAAC9configure6apiKeyABSS_tF",
+            "usr": "s:6CliqIt0aB3SDKC9configure6apiKeyACSS_tF",
+            "mangledName": "$s6CliqIt0aB3SDKC9configure6apiKeyACSS_tF",
             "moduleName": "CliqIt",
             "declAttributes": [
               "Final",
@@ -517,9 +517,9 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "CliqIt",
-                "printedName": "CliqIt.CliqIt",
-                "usr": "s:6CliqItAAC"
+                "name": "CliqItSDK",
+                "printedName": "CliqIt.CliqItSDK",
+                "usr": "s:6CliqIt0aB3SDKC"
               },
               {
                 "kind": "TypeNominal",
@@ -529,8 +529,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:6CliqItAAC9configureyAbA0aB13ConfigurationVF",
-            "mangledName": "$s6CliqItAAC9configureyAbA0aB13ConfigurationVF",
+            "usr": "s:6CliqIt0aB3SDKC9configureyAcA0aB13ConfigurationVF",
+            "mangledName": "$s6CliqIt0aB3SDKC9configureyAcA0aB13ConfigurationVF",
             "moduleName": "CliqIt",
             "declAttributes": [
               "Final",
@@ -583,8 +583,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:6CliqItAAC20onDeferredMatchDebugyyys6ResultOyAA0abdE8ResponseVAA0abdE5ErrorOGcF",
-            "mangledName": "$s6CliqItAAC20onDeferredMatchDebugyyys6ResultOyAA0abdE8ResponseVAA0abdE5ErrorOGcF",
+            "usr": "s:6CliqIt0aB3SDKC20onDeferredMatchDebugyyys6ResultOyAA0abeF8ResponseVAA0abeF5ErrorOGcF",
+            "mangledName": "$s6CliqIt0aB3SDKC20onDeferredMatchDebugyyys6ResultOyAA0abeF8ResponseVAA0abeF5ErrorOGcF",
             "moduleName": "CliqIt",
             "declAttributes": [
               "Final",
@@ -622,8 +622,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:6CliqItAAC15onDeferredMatchyyyAA0abdE7OutcomeOcF",
-            "mangledName": "$s6CliqItAAC15onDeferredMatchyyyAA0abdE7OutcomeOcF",
+            "usr": "s:6CliqIt0aB3SDKC15onDeferredMatchyyyAA0abeF7OutcomeOcF",
+            "mangledName": "$s6CliqIt0aB3SDKC15onDeferredMatchyyyAA0abeF7OutcomeOcF",
             "moduleName": "CliqIt",
             "declAttributes": [
               "Final",
@@ -662,8 +662,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:6CliqItAAC27onDeferredMatchDebugRequestyyySScF",
-            "mangledName": "$s6CliqItAAC27onDeferredMatchDebugRequestyyySScF",
+            "usr": "s:6CliqIt0aB3SDKC27onDeferredMatchDebugRequestyyySScF",
+            "mangledName": "$s6CliqIt0aB3SDKC27onDeferredMatchDebugRequestyyySScF",
             "moduleName": "CliqIt",
             "declAttributes": [
               "Final",
@@ -698,8 +698,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:6CliqItAAC21runDeferredMatchDebug14clickSessionIdySSSg_tF",
-            "mangledName": "$s6CliqItAAC21runDeferredMatchDebug14clickSessionIdySSSg_tF",
+            "usr": "s:6CliqIt0aB3SDKC21runDeferredMatchDebug14clickSessionIdySSSg_tF",
+            "mangledName": "$s6CliqIt0aB3SDKC21runDeferredMatchDebug14clickSessionIdySSSg_tF",
             "moduleName": "CliqIt",
             "declAttributes": [
               "Final",
@@ -737,8 +737,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:6CliqItAAC10onDeepLinkyyyAA0aB7PayloadVcF",
-            "mangledName": "$s6CliqItAAC10onDeepLinkyyyAA0aB7PayloadVcF",
+            "usr": "s:6CliqIt0aB3SDKC10onDeepLinkyyyAA0aB7PayloadVcF",
+            "mangledName": "$s6CliqIt0aB3SDKC10onDeepLinkyyyAA0aB7PayloadVcF",
             "moduleName": "CliqIt",
             "declAttributes": [
               "Final",
@@ -765,8 +765,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:6CliqItAAC6handle3urlSb10Foundation3URLV_tF",
-            "mangledName": "$s6CliqItAAC6handle3urlSb10Foundation3URLV_tF",
+            "usr": "s:6CliqIt0aB3SDKC6handle3urlSb10Foundation3URLV_tF",
+            "mangledName": "$s6CliqIt0aB3SDKC6handle3urlSb10Foundation3URLV_tF",
             "moduleName": "CliqIt",
             "declAttributes": [
               "Final",
@@ -794,8 +794,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:6CliqItAAC6handle12userActivitySbSo06NSUserE0C_tF",
-            "mangledName": "$s6CliqItAAC6handle12userActivitySbSo06NSUserE0C_tF",
+            "usr": "s:6CliqIt0aB3SDKC6handle12userActivitySbSo06NSUserF0C_tF",
+            "mangledName": "$s6CliqIt0aB3SDKC6handle12userActivitySbSo06NSUserF0C_tF",
             "moduleName": "CliqIt",
             "declAttributes": [
               "Final",
@@ -825,8 +825,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:6CliqItAAC22consumePendingDeepLinkAA0aB7PayloadVSgyF",
-            "mangledName": "$s6CliqItAAC22consumePendingDeepLinkAA0aB7PayloadVSgyF",
+            "usr": "s:6CliqIt0aB3SDKC22consumePendingDeepLinkAA0aB7PayloadVSgyF",
+            "mangledName": "$s6CliqIt0aB3SDKC22consumePendingDeepLinkAA0aB7PayloadVSgyF",
             "moduleName": "CliqIt",
             "declAttributes": [
               "Final",
@@ -836,8 +836,8 @@
           }
         ],
         "declKind": "Class",
-        "usr": "s:6CliqItAAC",
-        "mangledName": "$s6CliqItAAC",
+        "usr": "s:6CliqIt0aB3SDKC",
+        "mangledName": "$s6CliqIt0aB3SDKC",
         "moduleName": "CliqIt",
         "declAttributes": [
           "Final",
@@ -7401,28 +7401,28 @@
     {
       "filePath": "\/Volumes\/ExternalDisk\/MRTDeepLink\/CliqIt\/CliqIt\/Classes\/CliqIt.swift",
       "kind": "BooleanLiteral",
-      "offset": 705,
+      "offset": 711,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/ExternalDisk\/MRTDeepLink\/CliqIt\/CliqIt\/Classes\/CliqIt.swift",
       "kind": "BooleanLiteral",
-      "offset": 751,
+      "offset": 757,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/ExternalDisk\/MRTDeepLink\/CliqIt\/CliqIt\/Classes\/CliqIt.swift",
       "kind": "StringLiteral",
-      "offset": 1008,
+      "offset": 1014,
       "length": 36,
       "value": "\"com.cliqit.deferred.match.reported\""
     },
     {
       "filePath": "\/Volumes\/ExternalDisk\/MRTDeepLink\/CliqIt\/CliqIt\/Classes\/CliqIt.swift",
       "kind": "StringLiteral",
-      "offset": 1091,
+      "offset": 1097,
       "length": 31,
       "value": "\"com.cliqit.deferred.delivered\""
     },
@@ -7471,7 +7471,7 @@
     {
       "filePath": "\/Volumes\/ExternalDisk\/MRTDeepLink\/CliqIt\/CliqIt\/Classes\/CliqItDeferredMatch.swift",
       "kind": "BooleanLiteral",
-      "offset": 5052,
+      "offset": 5055,
       "length": 5,
       "value": "false"
     },

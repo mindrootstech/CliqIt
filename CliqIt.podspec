@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'CliqIt'
-  s.version          = '2.0.0'
+  s.version          = '2.0.1'
   s.summary          = 'Deferred deep linking SDK for iOS.'
   s.description      = <<-DESC
     CliqIt attributes pre-install SmartLink clicks on first app open

@@ -2,7 +2,7 @@
 
 iOS SDK for **deferred deep linking** — closed-source binary only.
 
-**Version:** `2.0.0` · **iOS 15+** · **Swift 5**
+**Version:** `2.0.1` · **iOS 15+** · **Swift 5**
 
 ---
 
@@ -15,7 +15,7 @@ use_frameworks!
 target 'YourApp' do
   pod 'CliqIt',
       :git => 'https://github.com/mindrootstech/CliqIt.git',
-      :tag => '2.0.0'
+      :tag => '2.0.1'
 end
 ```
 
@@ -47,9 +47,9 @@ import SwiftUI
 @main
 struct MyApp: App {
     init() {
-        CliqIt.shared.configure(apiKey: "pk_live_…")
+        CliqItSDK.shared.configure(apiKey: "pk_live_…")
 
-        CliqIt.shared.onDeferredMatch { outcome in
+        CliqItSDK.shared.onDeferredMatch { outcome in
             switch outcome {
             case .matched(let info):
                 print(info.destinationPath ?? "")
@@ -80,11 +80,11 @@ func application(
     _ application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
 ) -> Bool {
-    CliqIt.shared.configure(apiKey: "pk_live_…")
-    CliqIt.shared.onDeepLink { payload in
+    CliqItSDK.shared.configure(apiKey: "pk_live_…")
+    CliqItSDK.shared.onDeepLink { payload in
         print(payload.path, payload.isDeferred)
     }
-    CliqIt.shared.onDeferredMatch { outcome in
+    CliqItSDK.shared.onDeferredMatch { outcome in
         switch outcome {
         case .matched(let info): print(info.destinationPath ?? "")
         case .notMatched, .failed: break

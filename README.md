@@ -2,7 +2,7 @@
 
 iOS SDK for **deferred deep linking** — closed-source binary only.
 
-**Version:** `2.0.1` · **iOS 15+** · **Swift 5**
+**Version:** `2.0.2` · **iOS 15+** · **Swift 5**
 
 ---
 
@@ -15,7 +15,7 @@ use_frameworks!
 target 'YourApp' do
   pod 'CliqIt',
       :git => 'https://github.com/mindrootstech/CliqIt.git',
-      :tag => '2.0.1'
+      :tag => '2.0.2'
 end
 ```
 
